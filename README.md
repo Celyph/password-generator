@@ -9,7 +9,7 @@
 
 ## Github & Deployed Site
 - [Github](https://github.com/Celyph)
-- [Deployed Site](https://celyph.github.io/portfolio-1/)
+- [Deployed Site](https://celyph.github.io/password-generator/)
 
 ## Usage
 
