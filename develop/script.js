@@ -1,22 +1,25 @@
-// Assignment Code
+/*START assignment code*/
 var generateBtn = document.querySelector("#generate");
+/*END assignment code*/
 
-// Write password to the #password input
+/*START write password function*/
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
-
 }
+/*END write password function*/
 
+/*START password variables*/
 function generatePassword() {
   var numbers = "0123456789";
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
   var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var special = "!@#$%^&*()";
+/*END password variables*/
 
+
+/*START window prompts*/
   var pwLength = window.prompt('How many characters would you like your password to contain?');
  if (pwLength < 8) {
   pwLength = 8;
@@ -30,21 +33,25 @@ function generatePassword() {
   var pwLowercase = window.confirm('Click OK to confirm lowercase characters.');
   var pwUppercase = window.confirm('Click OK to confirm uppercase characters.');
   var pwSpecial = window.confirm('Click OK to confirm special characters.');
+/*END window prompts*/
 
+/*START allowed password variables based on window prompts*/
   var allowed = "";
   if (pwNumbers) {
-    allowed.concat(numbers)
+    allowed = allowed.concat(numbers)
   }
   if (pwLowercase) {
-    allowed.concat(lowercase)
+    allowed = allowed.concat(lowercase)
   }
   if (pwUppercase) {
-    allowed.concat(uppercase)
+    allowed = allowed.concat(uppercase)
   }
   if (pwSpecial) {
-    allowed.concat(special)
+    allowed = allowed.concat(special)
   }
+/*END allowed password variables based on window prompts*/
 
+/*START password generation*/
   var password = "";
 
 for (var i = 0; i < pwLength; i++) {
@@ -52,10 +59,15 @@ for (var i = 0; i < pwLength; i++) {
   password += c;
 }
 return password
+/*END password generation*/
 }
 
+/*START helper function for random value from list*/
 function getRandom (list) {
   return list[Math.floor(Math.random()*list.length)];
 }
-// Add event listener to generate button
+/*END helper function for random value from list*/
+
+/*START event listener for button click*/
 generateBtn.addEventListener("click", writePassword);
+/*END event listener for button click*/
