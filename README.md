@@ -13,9 +13,8 @@
 
 ## Usage
 
-![First screenshot of the deployed website.](images/first-screenshot.png)
+![Screenshot of the deployed website.](images/screenshot.png)
 
-![Second screenshot of the deployed website.](images/second-screenshot.png)
 
 ## Credits
 
